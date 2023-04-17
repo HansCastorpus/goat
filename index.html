@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaflet Tutorial</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Raleway:wght@200;300&display=swap");
+    </style>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .leaflet-container {
+        height: 1200px;
+        width: 1750px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+
+    <style>
+      .leaflet-control-scale-line {
+        font-family: "Raleway", sans-serif;
+        border: solid #000;
+        border-top-color: rgb(0, 0, 0);
+        border-top-style: solid;
+        border-top-width: medium;
+        border-top: none;
+        line-height: 1.1;
+        padding: 2px 5px 2px;
+        white-space: nowrap;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .leaflet-bar {
+        box-shadow: 0 1px 5px rgba(0, 0, 0);
+        border-radius: 0px;
+      }
+
+      .info {
+        padding: 6px 8px;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px;
+        border-style: solid;
+      }
+      .info h4 {
+        margin: 0 0 5px;
+        color: black;
+      }
+    </style>
+
+    <style>
+      .leaflet-container {
+        font-family: "Raleway", sans-serif;
+        font-size: 17px;
+        line-height: 1.2;
+      }
+
+      .leaflet-control-layers-expanded {
+        background-color: rgb(255, 255, 255);
+        border-style: solid;
+      }
+
+      .leaflet-touch .leaflet-control-layers {
+        color: rgba(0, 0, 0, 0.8);
+      }
+
+      .leaflet-touch .leaflet-control-layers,
+      .leaflet-touch .leaflet-bar {
+        border: solid rgb(0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      .leaflet-control-layers {
+        border-radius: 0px;
+      }
+
+      /*Legend specific*/
+      .legend {
+        padding: 6px 8px;
+        font: 18px "Raleway", sans-serif;
+        background: rgba(255, 255, 255);
+        line-height: 24px;
+        color: #000000;
+        border-style: solid;
+      }
+      .legend h4 {
+        text-align: center;
+        font-size: 18px;
+        margin: 2px 12px 8px;
+        color: #000000;
+      }
+
+      .legend span {
+        position: relative;
+        bottom: 3px;
+      }
+
+      .legend i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: 0 8px 0 0;
+        opacity: 0.7;
+      }
+
+      .legend i.icon {
+        background-size: 18px;
+        background-color: rgba(255, 255, 255, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+
+    <script src="https://hanscastorpus.github.io/goat/data/BLM_Natl_Wild_Horse_and_Burro_Herd_Area_Polygons.js"></script>
+    <script src="https://hanscastorpus.github.io/goat/data/BLM_Natl_Sheep_and_Goat_Authorized_Grazing_Allotments.js"></script>
+    <script src="https://hanscastorpus.github.io/goat/data/FS_National_Forests_Dataset_(US_Forest_Service_Proclaimed_Forests)-2.js"></script>
+    <script src="https://hanscastorpus.github.io/goat/data/Javascript.js"></script>
+  </body>
+</html>
+
