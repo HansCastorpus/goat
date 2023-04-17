@@ -137,13 +137,13 @@ legend.onAdd = function (map) {
   var div = L.DomUtil.create("div", "legend");
   div.innerHTML += "<h4>Land Use - USA</h4>";
   div.innerHTML +=
-    '<i style="background: #b78390"></i><span>Wild Horse and Burro Land</span><br>';
+    '<i style="background: #8896ab"></i><span>Wild Horse and Burro Land</span><br>';
   div.innerHTML +=
-    '<i style="background: #8996ab"></i><span>Goat and Sheep Land</span><br>';
+    '<i style="background: #b4818f"></i><span>Goat and Sheep Land</span><br>';
   div.innerHTML +=
-    '<i style="background: #6d617c"></i><span>Overlay of Both Land</span><br>';
+    '<i style="background: #80546d"></i><span>Overlay of Both Land</span><br>';
   div.innerHTML +=
-    '<i style="background: #bccbba"></i><span>National Forest</span><br>';
+    '<i style="background: #bacbb9"></i><span>National Forest</span><br>';
   //div.innerHTML +=
   //'<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
 
