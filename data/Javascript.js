@@ -53,7 +53,7 @@ var goatData = L.geoJson(goat, {
     layer.bindPopup(goat);
   },
   style: {
-    fillColor: "#213e68",
+    fillColor: "#7a1330",
     fillOpacity: "0.5",
     stroke: 0,
   },
@@ -64,7 +64,7 @@ var horseData = L.geoJson(horse, {
     layer.bindPopup(goat);
   },
   style: {
-    fillColor: "#7a1330",
+    fillColor: "#213e68",
     fillOpacity: 0.5,
     stroke: 0,
   },
