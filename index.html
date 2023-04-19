@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaflet Tutorial</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Raleway:wght@200;300&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .leaflet-container {
+        height: 1200px;
+        width: 1750px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .leaflet-control-scale-line {
+        font-family: "Raleway", sans-serif;
+        border: solid #000;
+        border-top-color: rgb(0, 0, 0);
+        border-top-style: solid;
+        border-top-width: medium;
+        border-top: none;
+        line-height: 1.1;
+        padding: 2px 5px 2px;
+        white-space: nowrap;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .leaflet-bar {
+        box-shadow: 0 1px 5px rgba(0, 0, 0);
+        border-radius: 0px;
+      }
+
+      .info {
+        padding: 6px 8px;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px;
+        border-style: solid;
+      }
+      .info h4 {
+        margin: 0 0 5px;
+        color: black;
+      }
+    </style>
+
+    <style>
+      .leaflet-container {
+        font-family: "Raleway", sans-serif;
+        font-size: 17px;
+        line-height: 1.2;
+      }
+
+      .leaflet-control-layers-expanded {
+        background-color: rgb(255, 255, 255);
+        border-style: solid;
+      }
+
+      .leaflet-touch .leaflet-control-layers {
+        color: rgba(0, 0, 0, 0.8);
+      }
+
+      .leaflet-touch .leaflet-control-layers,
+      .leaflet-touch .leaflet-bar {
+        border: solid rgb(0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      .leaflet-control-layers {
+        border-radius: 0px;
+      }
+
+      /*Legend specific*/
+      .legend {
+        padding: 6px 8px;
+        font: 18px "Raleway", sans-serif;
+        background: rgba(255, 255, 255);
+        line-height: 24px;
+        color: #000000;
+        border-style: solid;
+      }
+      .legend h4 {
+        text-align: center;
+        font-size: 18px;
+        margin: 2px 12px 8px;
+        color: #000000;
+      }
+
+      .legend span {
+        position: relative;
+        bottom: 3px;
+      }
+
+      .legend i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: 0 8px 0 0;
+        opacity: 0.7;
+      }
+
+      .legend i.icon {
+        background-size: 18px;
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      .leaflet-popup-content-wrapper,
+      .leaflet-popup-tip {
+        background: rgb(78, 78, 78);
+        color: #e4e4e4;
+        box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+        border-radius: 0px;
+        box-shadow: none;
+        text-align: left;
+        width: 489px;
+      }
+
+      .leaflet-popup-tip-container {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: 50%;
+        margin-top: -1px;
+        margin-left: -20px;
+        overflow: hidden;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script src="https://hanscastorpus.github.io/goat/data/geoJson.js"></script>
+
+    <script src="https://hanscastorpus.github.io/goat/data/Horse.js"></script>
+    <script src="https://hanscastorpus.github.io/goat/data/Goat.js"></script>
+    <script src="https://hanscastorpus.github.io/goat/data/Forest.js"></script>
+    <script src="./Data/Javascript.js"></script>
+
+    <script src="./Data/Horse Population.js"></script>
+  </body>
+</html>
+
+<script>
+  var greenIcon = L.icon({
+    iconUrl: "https://hanscastorpus.github.io/goat/PNG/Animals.png",
+    iconSize: [43, 20],
+    popupAnchor: [0, -10],
+  });
+
+  L.marker([36.71572463728499, -115.0756203094773], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> NEVADA </h1><img src='https://hanscastorpus.github.io/goat/PNG/Nevada.png' />"
+    );
+
+  L.marker([33.824649921897915, -115.62009972646533], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> CALIFORNIA </h1><img src='https://hanscastorpus.github.io/goat/PNG/California.png' />"
+    );
+
+  L.marker([42.52639269045525, -123.06410922211538], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> OREGON </h1><img src='https://hanscastorpus.github.io/goat/PNG/Oregon.png' />"
+    );
+
+  L.marker([42.33450203584229, -116.22468910524278], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> IDAHO </h1><img src='https://hanscastorpus.github.io/goat/PNG/Idaho.png' />"
+    );
+
+  L.marker([32.4972896231523, -112.4443072076275], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> ARIZONA </h1><img src='https://hanscastorpus.github.io/goat/PNG/Arizona.png' />"
+    );
+
+  L.marker([32.33623774180283, -107.4242455522399], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> NEW MEXICO </h1><img src='https://hanscastorpus.github.io/goat/PNG/New Mexico.png' />"
+    );
+
+  L.marker([37.644818597752675, -103.35418054539119], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> COLORADO </h1><img src='https://hanscastorpus.github.io/goat/PNG/Colorado.png' />"
+    );
+
+  L.marker([37.51778181827696, -110.67492591353185], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> UTAH </h1><img src='https://hanscastorpus.github.io/goat/PNG/Utah.png' />"
+    );
+
+  L.marker([41.478846742867375, -104.99605952542886], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> WYOMING </h1><img src='https://hanscastorpus.github.io/goat/PNG/Wyoming.png' />"
+    );
+
+  L.marker([45.3994068519427, -107.26008463838318], { icon: greenIcon })
+    .addTo(map)
+    .bindPopup(
+      "<h1> MONTANA </h1><img src='https://hanscastorpus.github.io/goat/PNG/Montana.png' />"
+    );
+</script>
