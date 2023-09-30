@@ -1,0 +1,214 @@
+body{
+    background-color: rgb(231, 226, 219);
+}
+
+
+.Title {
+  display: flex;
+  flex-direction: column;
+align-items: center;  font-family: 'Raleway', sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15%;
+  padding-right: 15%;
+  
+}
+
+.title__text{
+    column-count: 2;
+    padding: 10px 10px 0px 10px;
+}
+h1{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-family: 'Raleway', sans-serif;
+font-size: 16px;
+}
+.map {
+  display: flex;
+  justify-content: center;
+  height: 906px;
+  min-width: 20vh;
+  border: 3px solid black;
+  background-color: white;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+iframe {
+  width: 100%;
+}
+img {
+  width: 12vh;
+  min-width: 7vh;
+}
+
+.container {
+  min-width: 20vh;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border: 3px solid black;
+  background-color: white;
+
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.livestock {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.livestock__logo {
+  object-fit: contain;
+  padding: 0;
+}
+
+
+.burro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.burro__logo {
+  object-fit: contain;
+  padding: 0;
+}
+
+
+
+.forest {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.forest__logo {
+  object-fit: contain;
+  padding: 0;
+}
+
+.forest__section {
+    font-size: ;
+}
+
+.sources {
+  text-align: center;
+  border: 3px solid black;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  background-color: white;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  text-decoration: none;
+  color: white;
+}
+
+h3{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 715px) {
+    .title__text{
+        column-count: 1;
+    }
+
+  .container {
+    border: 3px solid black;
+    padding: 20px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .burro {
+    display: flex;
+    flex-direction: column;
+  }
+  .livestock {
+    display: flex;
+    flex-direction: column;
+  }
+  .forest {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sources__list--link{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 2200px) {
+    .title__text{
+        column-count: 3;
+    }
+
+  main {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-basis: auto;
+    border: 3px solid black;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .burro {
+    align-self: flex-start;
+  }
+
+  .burro__logo {
+    align-self: flex-start;
+  }
+
+  .livestock {
+    align-self: flex-start;
+  }
+
+  .livestock__logo {
+    align-self: flex-start;
+  }
+
+  .forest {
+    align-self: flex-start;
+  }
+
+  .forest__logo {
+    align-self: flex-start;
+  }
+
+  h2 {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+}
